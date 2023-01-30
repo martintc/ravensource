@@ -1,0 +1,30 @@
+DEF[PORTVERSION]=	%%VERSION%%
+# ----------------------------------------------------------------------------
+
+NAMEBASE=		zee
+VERSION=		${PORTVERSION}
+KEYWORDS=		editors rust
+VARIANTS=		standard
+SDESC[standard]=	Text editor in the spirit of Emacs
+HOMEPAGE=		none
+CONTACT=		Todd_Martin[warfox@sdf.org]
+
+%%DOWNLOAD_GROUPS%%
+SITES[main]=		https://crates.io/api/v1/crates/zee/${PORTVERSION}/download?dummy=/
+%%CR_SITES%%
+
+DISTFILE[1]=		zee-${PORTVERSION}.tar.gz:main
+%%CR_DISTFILES%%
+%%DF_INDEX%%
+
+SPKGS[standard]=	single
+
+OPTIONS_AVAILABLE=	none
+OPTIONS_STANDARD=	none
+
+FPC_EQUIVALENT=		editors/zee
+
+USES=			cargo
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/.crates2.json
