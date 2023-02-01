@@ -1,5 +1,5 @@
-DEF[PORTVERSION]=	1.66.1
-DEF[RUSTX_BOOT]=	1.65.0
+DEF[PORTVERSION]=	1.67.0
+DEF[RUSTX_BOOT]=	1.66.1
 DEF[CURL_VERSION]=	7.87.0
 # ----------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ DISTFILE[10]=		cargo-${RUSTX_BOOT}-x86_64-unknown-linux-gnu.tar.gz:main
 DISTFILE[11]=		rustc-${RUSTX_BOOT}-x86_64-unknown-netbsd.tar.gz:main
 DISTFILE[12]=		rust-std-${RUSTX_BOOT}-x86_64-unknown-netbsd.tar.gz:main
 DISTFILE[13]=		cargo-${RUSTX_BOOT}-x86_64-unknown-netbsd.tar.gz:main
-DISTFILE[14]=		curl-${CURL_VERSION}.tar.xz:main
+DISTFILE[14]=		curl-${CURL_VERSION}.tar.xz:curl
 DF_INDEX=		1 14
 
 SPKGS[standard]=	single
